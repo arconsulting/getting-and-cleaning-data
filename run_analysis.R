@@ -1,5 +1,9 @@
 run_analysis <- function() {
     
+    ## Name:    run_analysis.R
+    ## Purpose: Tidy up and calculate means of data
+    ## Author:  Aric Rosenbaum
+    
     ## Clean up
     rm(list=ls())
     
@@ -57,6 +61,6 @@ run_analysis <- function() {
     data.tidy <- dcast(data.melt, activity + subjectID ~ variable, mean)
     
     ## Write data
-    write.table(data.tidy, "r_analysis.txt", row.name = FALSE)
+    write.table(data.tidy, "run_analysis.txt", row.name = FALSE)
     
 }
